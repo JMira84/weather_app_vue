@@ -22,6 +22,8 @@ const mutations = {
 const actions = {
     weatherForecast: async (context, params) => {
         const response = await instance.get(`/onecall?lat=${params.lat}&lon=${params.lon}&units=metric&exclude=minutely,hourly&appid=${params.apiKey}`)
+        // Remove the last element, because I only want 7 elements
+        response.data.daily.splice(-1, 1)
         if (response) context.commit('SET_WEATHER', response.data)
     }
 }

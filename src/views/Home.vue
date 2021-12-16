@@ -17,7 +17,7 @@ export default {
             locationOptions: {
                 enableHighAccuracy: true,
                 timeout: 5000,
-                maximumAge: 0,
+                maximumAge: 0
             },
         };
     },
@@ -72,23 +72,20 @@ export default {
                     lat: lat
                 });
             } catch (error) {
-                console.log(error);
+                console.log(error)
             }
         },
         async success(pos) {
-            let crd = pos.coords;
+            let crd = pos.coords
 
             try {
-                await this.fetchWeather(crd.longitude, crd.latitude);
-
-                // Remove the last element, because I only want 7 elements
-                this.getWeather.splice(-1, 1);
+                await this.fetchWeather(crd.longitude, crd.latitude)
             } catch (error) {
-                console.log(error);
+                console.log(error)
             }
         },
         error(err) {
-            console.warn('ERROR(' + err.code + '): ' + err.message);
+            console.warn('ERROR(' + err.code + '): ' + err.message)
         },
     },
     async mounted() {
@@ -96,7 +93,7 @@ export default {
             this.success,
             this.error,
             this.locationOptions
-        );
+        )
     },
 };
 </script>
