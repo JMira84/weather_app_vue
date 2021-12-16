@@ -66,7 +66,7 @@ $light_yellow: #E6DF95;
     .other-info-wrapper {
         position: absolute;
         left: 50%;
-        bottom: 15px;
+        bottom: 17px;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         .precipitation,
@@ -78,7 +78,7 @@ $light_yellow: #E6DF95;
             }
         }
         .precipitation {
-            padding-bottom: 5px;
+            padding-bottom: 7px;
         }
         .min-temperature {
             .value {
