@@ -42,7 +42,7 @@ $dark_blue: #0E2E3A;
 $light_yellow: #E6DF95;
 
 .weather-card-wrapper {
-    height: 350px;
+    height: 355px;
     position: relative;
     border-radius: 30px;
     font-family: 'Oswald', sans-serif;
